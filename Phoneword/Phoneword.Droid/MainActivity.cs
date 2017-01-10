@@ -6,6 +6,9 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace Phoneword.Droid
 {
@@ -20,6 +23,8 @@ namespace Phoneword.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            MobileCenter.Configure("7c04005c-17d1-453b-a1d8-77744a8c119f");
             LoadApplication(new App());
         }
     }

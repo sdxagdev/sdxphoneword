@@ -1,5 +1,8 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Phoneword
@@ -8,6 +11,7 @@ namespace Phoneword
     {
         public App()
         {
+            MobileCenter.Start(typeof(Analytics), typeof(Crashes));
             InitializeComponent();
             MainPage = new MainPage();
         }
