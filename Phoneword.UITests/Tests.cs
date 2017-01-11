@@ -18,7 +18,7 @@ namespace Phoneword.UITests
         {
             this.platform = platform;
         }
-
+         
         [SetUp]
         public void BeforeEachTest()
         {
