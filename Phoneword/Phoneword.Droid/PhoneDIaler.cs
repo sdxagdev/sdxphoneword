@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using Android.Content;
 using Android.Telephony;
 using Phoneword.Droid;
 using System.Linq;
+using Microsoft.Azure.Mobile.Analytics;
 using Xamarin.Forms;
 using Uri = Android.Net.Uri;
 
@@ -12,6 +14,11 @@ namespace Phoneword.Droid
     {
         public bool Dial(string number)
         {
+            Analytics.TrackEvent("Call clicked", new Dictionary<string, string>
+            {
+                { "Number", number }
+            });
+
             var context = Forms.Context;
             if (context == null)
                 return false;

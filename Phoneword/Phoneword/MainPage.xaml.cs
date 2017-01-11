@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Microsoft.Azure.Mobile.Analytics;
 using Xamarin.Forms;
 
 namespace Phoneword
@@ -25,6 +27,11 @@ namespace Phoneword
                 callButton.IsEnabled = false;
                 callButton.Text = "Call";
             }
+
+            Analytics.TrackEvent("Translation clicked", new Dictionary<string, string>
+            {
+                { "Button text", callButton.Text }
+            });
         }
 
         async void OnCall(object sender, EventArgs e)
