@@ -30,7 +30,7 @@ namespace Phoneword.UITests
         {
             app.WaitForElement(c => c.Marked("phoneNumberText").Text("1-855-XAMARIN"));
         }
-
+           
         [Test]
         public void TappingOnButtonTranslatesDefaultText()
         {
