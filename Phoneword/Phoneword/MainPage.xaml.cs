@@ -20,7 +20,7 @@ namespace Phoneword
 
             Analytics.TrackEvent("Translation clicked", new Dictionary<string, string>
             {
-                { "Button text", translatedNumber }
+                { "Button text", phoneNumberText.Text }
             });
 
             if (!string.IsNullOrWhiteSpace(translatedNumber))
