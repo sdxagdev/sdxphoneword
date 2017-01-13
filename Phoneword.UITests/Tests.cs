@@ -12,7 +12,7 @@ namespace Phoneword.UITests
     public class Tests
     {
         IApp app;
-        Platform platform;
+        Platform platform; 
 
         public Tests(Platform platform)
         {
