@@ -58,12 +58,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Phoneword\Phoneword.Droid\Phoneword.Droid.csproj">
-      <Project>{e366b35a-5153-4f85-91ca-ed4b2dc96540}</Project>
-      <Name>Phoneword.Droid</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
